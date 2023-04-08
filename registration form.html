@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+    <link rel="stylesheet" href="stylesheet3.css">
+</head>
+<body>
+    <div class="header">
+        <ul>
+            <li><a href="index.html"><img class="logo" src="BIN/logo scl.png" alt="logo"></a></li>
+            <li style="float:right"><button class="btn-hamburger" onclick="myFunction()"><img class="hamburger"
+                src="BIN/hamburger icon.png" alt=""></button></li>
+          </ul>
+    </div>
+    <div id="toggle">
+        <ul>
+            <li><a href="#" >Academic Excellence</a></li>
+            <li><a href="#" >Oustanding Experience</a></li>
+            <li><a href="#" >Our Campus</a></li>
+            <li><a href="#" >Team</a></li>
+            <li><a href="#" >Admissions</a></li>
+            <li><a href="About me.html">About me</a></li>
+            <li><a href="contact me.html">Contact me</a></li>
+          </ul>
+    </div>
+    <div class="content">
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="registration form.html">Registration form</a></li>
+                <li><a href="login form.html">Login form</a></li>
+                <li><a href="logout.html">Log Out</a></li>
+                
+              </ul>
+        </div>
+        <div class="full-form">
+            <legend >Registation Form</legend>
+          <div class="form">
+            <form name="registration" onSubmit="return formValidation();">
+              <table>
+                
+                <tr>
+                  <td><label for="userid" class="left-allign">User-Id -</label></td>
+                  <td><input type="text" name="userid" id="userid" class="input"  /></td>
+                </tr>
+                <tr>
+                  <td><label for="passid" class="left-allign">Password -</label></td>
+                  <td><input type="password" name="passid" id="passid" class="input"   /></td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="username" class="left-allign"> <label for="name">Name -</label>
+                  </td>
+                  <td><input type="text" id="username" name="username"  class="input"/></td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="address" class="left-allign">Address -</label>
+                  </td>
+                  <td><input type="text" id="address" name="address" class="input" /></td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="country" class="left-allign">Country -</label>
+                  </td>
+                  <td>
+                  <select id="country" name="country" class="input" >
+                    <option value="default">(Please Select Country)</option>
+                    <option value="srilanka">Srilanka</option>
+                    <option value="india">India</option>
+                  </select>
+                </td>
+                <tr>
+                  <td>
+                    <label for="zip" class="left-allign">Zip-Code -</label>
+                  </td>
+                  <td><input type="text" id="zip" name="zip" class="input" /></td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="email" class="left-allign">Email -</label>
+                  </td>
+                  <td><input type="text" id="email" name="email" class="input"/></td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="msex" class="left-allign">Sex -</label>
+                  </td>
+                  <td class="text">
+                    <input type="radio" name="gender"   class="input" />Male
+                    <input type="radio" name="gender"  />Female</td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="language" class="left-allign">Language -</label>
+                  </td >
+                  <td class="text"><input type="checkbox"  class="language" name="english"  />English
+                    <input type="checkbox" class="language" name="non-english" />Non-English</td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="about" class="left-allign">About -</label>
+                  </td>
+                  <td><textarea name="" id="about" cols="30" rows="20"></textarea></td>
+                </tr>
+              </table>
+            <input type="submit" class="btn-submit">
+            </form>
+          </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="foot-p">© 2023 Nord Anglia Education</p>
+      <img class="social" src="BIN/fb.png" alt="fb">
+      <img class="social" src="BIN/insta.png" alt="fb"> 
+      <img class="social" src="BIN/whatsapp.png" alt="fb"> 
+      <img class="social" src="BIN/twitter.png" alt="fb">
+    </div>
+
+    
+    
+    <script src="myscripts.js"></script>
+    
+</body>
+</html>
