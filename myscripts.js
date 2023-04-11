@@ -9,7 +9,7 @@ function myFunction() {
   }
 }
 
-const userid = document.querySelector("#userid");
+// const userid = document.querySelector("#userid");
 function formValidation() {
   var uid = document.registration.userid;
   var passid = document.registration.passid;
@@ -20,8 +20,9 @@ function formValidation() {
   var ucountry = document.registration.country;
   var uzip = document.registration.zip;
   var uemail = document.registration.email;
-  // var umsex = document.registration.msex;
-  //var ufsex = document.registration.fsex;
+  var umsex = document.registration.gender;
+  // var lang = document.registration.english;
+  var checkbox=document.getElementById("checkbox1");
 
   if (userid_validation(uid, 5, 12)) {
     if (passid_validation(passid, 7, 12)) {
@@ -30,11 +31,14 @@ function formValidation() {
           if (countryselect(ucountry)) {
             if (allnumeric(uzip)) {
               if (ValidateEmail(uemail)) {
-                // if (validsex(umsex)) {
-                console.log("write");
-                return true;
+                if (validsex(umsex)) {
+                  if(validenglish()){
+                    return true;
+                  }
+                 
+                
 
-                // }
+              
               }
             }
           }
@@ -124,31 +128,48 @@ function ValidateEmail(uemail) {
   }
 }
 function validsex(umsex) {
-  x = 0;
+  y = 0;
 
   if (umsex[0].checked) {
-    x++;
+    y++;
   }
   if (umsex[1].checked) {
-    x++;
+    y++;
   }
 
-  /* if (x==2)
-{
-alert('Both Male/Female are checked');
-ufsex.checked=false
-umsex.checked=false
-umsex.focus();
-return false;
-} */
+ 
 
-  if (x == 0) {
+  if (y == 0) {
     alert("Select Male/Female");
-    //umsex.focus();
+    // umsex.focus();
     return false;
-  } else {
+    
+  }
+else{
+  
+    //window.location.reload()
+    return true;
+}}
+function validenglish(){
+ 
+
+
+  
+
+ 
+
+  if ((document.getElementById("checkbox1").checked)||(document.getElementById("checkbox2").checked)) {
     alert("Form Succesfully Submitted");
     //window.location.reload()
     return true;
+   
+    
   }
+
+  else {
+    
+    alert("Please select your language ");
+    return false;
+  }}
+
 }
